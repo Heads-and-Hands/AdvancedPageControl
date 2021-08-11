@@ -11,6 +11,7 @@ import UIKit
 public protocol AdvancedPageControlDraw {
     var currentItem: CGFloat { get set }
     var size: CGFloat { get set }
+    var space: CGFloat { get set }
 
     var numberOfPages: Int { get set }
     func draw(_ rect: CGRect)
@@ -56,7 +57,7 @@ public class AdvancedPageControlDrawerParent {
     public var currentItem: CGFloat
     public var items = [Int]()
     var width: CGFloat
-    var space: CGFloat
+    public var space: CGFloat
     var radius: CGFloat
     var dotsColor: UIColor
     var isBordered: Bool
